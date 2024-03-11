@@ -2,8 +2,8 @@ from openai import OpenAI
 import streamlit as st
 import time
 
-assistant_id = 'asst_fickQAqlQw8ZWVx2gR7rF0Fc'
-# thread_id='thread_FML87JufDltp8XxqpUYudsIK'
+assistant_id = st.screts["assistant_id"]
+thread_id = st.screts["thread_id"]
 
 with st.sidebar :
 
@@ -18,7 +18,7 @@ with st.sidebar :
 
     client = OpenAI(api_key=openai_api_key)
 
-    thread_id = st.text_input("thread ID",value='thread_FML87JufDltp8XxqpUYudsIK')
+    thread_id = st.text_input("thread ID",value=thread_id)
 
     thread_make_btn = st.button("Create a new thread")
     if thread_make_btn : 
