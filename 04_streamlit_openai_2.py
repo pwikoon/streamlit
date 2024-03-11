@@ -14,7 +14,7 @@ with st.sidebar :
     st.markdown(iframe_html, unsafe_allow_html=True)
     st.info("쿠팡 파트너스 경고 글")
 
-    openai_api_key = st.text_input("Open API KEY", type="password", value="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")
+    openai_api_key = st.text_input("Open API KEY", type="password")
 
     client = OpenAI(api_key=openai_api_key)
 
